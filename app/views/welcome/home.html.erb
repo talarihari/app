@@ -1,0 +1,9 @@
+
+<% if user_signed_in?%>
+<h1>Home Page With Login Credentials</h1>
+<p1>Ruby on Rails, or Rails, is a server-side web application framework written in Ruby under the MIT License. Rails is a model–view–controller (MVC) framework, providing default structures for a database, a web service, and web pages. It encourages and facilitates the use of web standards such as JSON or XML for data transfer, and HTML, CSS and JavaScript for display and user interfacing. In addition to MVC, Rails emphasizes the use of other well-known software engineering patterns and paradigms, including convention over configuration (CoC), don't repeat yourself (DRY), and the active record pattern.</p1><br><br>
+<%= link_to('Signout', destroy_user_session_path, method: :delete) %>
+<% else%>
+<h1>You Need To SignUp To See</h1>
+<%= link_to"Sign Up",new_user_registration_path %>
+<% end %>
